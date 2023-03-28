@@ -1,0 +1,80 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="Content-Security-Policy" content="default-src * data: gap: content: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+    <script type="text/javascript" src="../components/scripts.js" defer></script>    
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="animar-fundo">
+    <div class="animar-fundo">
+    <header>
+        <nav class="animar-fundo">
+            <h2>Estacionamento de Valmeiras</h2>
+        </nav>
+    </header>
+
+    <div class="container">
+        <p id="placap">Placa:</p>
+        <input type="text" id="placa" maxlength="8" pattern="[A-Z]{4}-\g{3}" required/>
+        <select id="combo">
+            <option value="nenhum"></option>
+            <option value="3.50" id="sub">Subcompacto</option>
+            <option value="4.50" id="com">Compacto</option>
+            <option value="4.50" id="hat">Hatch</option>
+            <option value="5.00" id="sed">Sedan</option>
+            <option value="6.00" id="suv">SUV</option>
+            <option value="7.00" id="pick">Pick-Up</option>
+        </select>
+        <p id="tempo">Tempo que Será Utilizado:</p>
+        <input type="number" id="horas" maxlength="1" step="1" required />
+        <br><br>
+    <div class="botao">
+        <button onclick="calculo()" id="compra">Comprar</button>
+        <br><br>
+        <button onclick="limparCampos()" id="novacompra">Nova Compra</button>
+        </div>
+        <div id="valorpagar">
+            <h3 id="resultado"></h3>  
+        </div>
+    </div>
+    <table>
+
+        <tbody id="tabela">
+            <thead>
+                <td id="animar-thead">Categoria</td>
+                <td id="animar-thead">Taxa Por Hora</td>
+            </thead>
+            <tr id="parte1">
+                <td id="animar-tabela">Subcompacto</td>
+                <td id="animar-tabela">R$ 3,50</td>
+            </tr>
+            <tr id="parte2">
+                <td id="animar-tabela">Compacto</td>
+                <td id="animar-tabela">R$: 4,50</td>
+            </tr>
+            <tr id="parte3">
+                <td id="animar-tabela">Hatch</td>
+                <td id="animar-tabela">R$: 4,50</td>
+            </tr>
+            <tr id="parte4">
+                <td id="animar-tabela">Sedan</td>
+                <td id="animar-tabela">R$: 5,00</td>
+            </tr>
+            <tr id="parte5">
+                <td id="animar-tabela">SUV</td>
+                <td id="animar-tabela">R$: 6,00</td>
+            </tr>
+            <tr id="parte6">
+                <td id="animar-tabela">Pick-Up</td>
+                <td id="animar-tabela">R$: 7,00</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+   <script src="components/scripts.js"></script>
+</body>
+
+</html>
